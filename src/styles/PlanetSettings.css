@@ -1,0 +1,81 @@
+
+
+.pSettingsContainer {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.nameDescription {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.customization h1 {
+    text-align: center;
+}
+
+.deleteButton {
+    margin-top: 125px;
+    text-align: right;
+}
+
+.submit {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.leftSide, .rightSide {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.center {
+    width: 2px;
+    background-color: #000000;
+    height: 90vh;
+}
+
+.collabName {
+    font-size: 20px;
+    font-weight: bold;
+}
+.collabName:hover {
+    cursor: pointer;
+}
+
+.collaborators li {
+    position: relative;
+    padding-right: 25px; /* Space for the message */
+}
+
+.promoteButton {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.kickButton {
+    margin-left: 20px;
+    font-size: 15px;   
+}
+
+.invite {
+    margin-top: -200px; /* Adjust margin to position invite correctly */
+}
+
+.line {
+    margin: 200px 0;
+}
+
+.line hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}

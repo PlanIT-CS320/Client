@@ -1,0 +1,568 @@
+.planit-page {
+    background-color: transparent;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 450px;
+  }
+
+  .planit-page .board {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow-x: auto;
+    max-width: 90vw;
+    width: 100%;
+    max-height: 80vh;
+    align-items: flex-start;    
+    display: flex;
+    overflow: visible;
+  }
+  
+  .planit-page .column {
+    background: linear-gradient(135deg, #4e5a65, #3a444e);
+    border-radius: 8px;
+    width: 240px;
+    color: rgb(41, 39, 39);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .planit-page .column h3 {
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffffdd;
+    background-color: #3a444e;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .planit-page .cards-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  
+  /* Card styling */
+  .planit-page .card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 8px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s;
+    font-size: 14px;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 220px;
+  }
+  
+  .planit-page .card:hover {
+    background-color: #f1f3f5;
+    transform: translateY(-2px);
+  }
+  
+  .planit-page .add-card-button {
+    background-color: #3a444e;
+    border: none;
+    color: #ffffffdd;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .planit-page .add-card-button:hover {
+    background-color: #4e5a65;
+    transform: scale(1.05);
+  }
+  
+  
+.hub-nav-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    margin: 0;
+    overflow: visible;
+}
+
+.hub-nav-left, .hub-nav-right {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+.logo-image {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.hub-nav-top a {
+    color: #ecf0f1;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.hub-container {
+    padding-top: 70px;
+}
+
+.hub-nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.settings-icon {
+    font-size: 24px;
+    color: #ecf0f1;
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 110px;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #bdc3c7;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+.search-bar input:focus {
+    border-color: #4b6cb7;
+    outline: none;
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-dropdown {
+    display: block;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    z-index: 1002;
+    color: #333;
+}
+
+.profile-dropdown .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.profile-dropdown .profile-name {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.profile-dropdown .profile-email {
+    font-size: 12px;
+    color: #888;
+}
+
+
+.profile-options a {
+    display: block;
+    padding: 8px 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.profile-options a:hover {
+    background-color: #f5f5f5;
+}
+
+.assigned-user-pfp {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .assigned-user {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+.custom-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+  
+  .custom-modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .custom-modal-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+  } 
+
+  .custom-modal-content .description-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding-bottom: 275px;
+    padding-left: 30px;
+  }
+
+  .custom-modal-content .priority-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding-top: 50px;
+    padding-left: 30px;
+  }
+
+  .custom-modal-content textarea {
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    resize: none;
+  }
+  
+  .custom-modal-content .title-content {
+    width: 95%;
+    height: 12px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    resize: none;
+  }
+
+
+  .custom-modal-content button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .custom-modal-content .save-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .custom-modal-content .save-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .custom-modal-content .cancel-button {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .custom-modal-content .cancel-button:hover {
+    background-color: #5a6268;
+  }
+
+  .delete-button {
+    background-color: #ff4d4d; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .delete-button:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+  }
+
+  .assigned-user-label {
+    display: block;
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-top: 125px;
+    font-weight: bold;
+  }
+  
+  .assigned-user-select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .custom-modal-content .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .custom-modal-content .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .custom-modal-content .timestamps {
+    text-align: right;
+  }
+  
+  .custom-modal-content .timestamps p {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+  }
+
+  .planit-page .empty-column {
+    color: black;
+    text-align: center;
+  }
+
+  .mailbox {
+    text-align: center;
+  }
+  
+  .mailbox h2 {
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .mailbox p {
+    margin-bottom: 20px;
+  }
+  
+  .mailbox button {
+    background-color: #4e5a65;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .mailbox button:hover {
+    background-color: #3a444e;
+  }
+
+  .invite-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.invite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  
+}
+
+.invite-item span {
+  flex: 1;
+  text-align: left;
+  color: black;
+}
+
+.invite-item button {
+  background-color: #4e5a65;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: 10px;
+}
+
+.invite-item button:hover {
+  background-color: #3a444e;
+}
+
+
+.custom-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.custom-modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.custom-modal-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.mailbox {
+  text-align: center;
+}
+
+.mailbox h2 {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.mailbox p {
+  margin-bottom: 20px;
+}
+
+.mailbox button {
+  background-color: #4e5a65;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mailbox button:hover {
+  background-color: #3a444e;
+}
+
+.invite-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.invite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.invite-item span {
+  flex: 1;
+  text-align: left;
+  color: black;
+}
+
+.invite-item button {
+  background-color: #4e5a65;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: 10px;
+}
+
+.invite-item button:hover {
+  background-color: #3a444e;
+}
