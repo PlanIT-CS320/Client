@@ -5,6 +5,7 @@ import { describe, it, expect, vi } from 'vitest';
 import Register from '../components/Register';
 import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
+import React from 'react';
 
 vi.mock('axios');
 
@@ -33,7 +34,7 @@ describe('Register Component', () => {
             </BrowserRouter>
         );
 
-        fireEvent.change(screen.getBy(('First name', {selector: "h2"}), { target: { value: 'John' } });
+        fireEvent.change(screen.getBy(('First name', {selector: "h2"}), { target: { value: 'John' } }));
         fireEvent.change(screen.getByLabelText('Last name'), { target: { value: 'Doe' } });
         fireEvent.change(screen.getByLabelText('Username'), { target: { value: 'johndoe' } });
         fireEvent.change(screen.getByLabelText('Email'), { target: { value: 'john@example.com' } });
