@@ -50,7 +50,7 @@ function Register() {
                         onChange={(e) => setFirstName(e.target.value)}
                         required
                     />
-                    <label htmlFor="firstname">First name</label>
+                    <label htmlFor="firstName">First name</label>
                 </div>
                 <div className="register-input-group">
                     <input
