@@ -17,7 +17,6 @@
     "bootstrap": "^5.3.3",
     "client": "file:",
     "dropbox": "^10.34.0",
-    "jsdom": "^26.0.0",
     "jwt-decode": "^4.0.0",
     "querystring": "^0.2.1",
     "react": "^18.3.1",
@@ -42,6 +41,7 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
+    "jsdom": "^26.0.0",
     "vite": "^5.4.7",
     "vitest": "^3.0.4"
   }
