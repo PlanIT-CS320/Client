@@ -18,7 +18,7 @@ function Register() {
         try
         {
             //Submit info to attempt registration
-            const res = await axios.post("http://localhost:3000/users/register", 
+            const res = await axios.post("http://localhost:3000/auth/register", 
             { firstName: firstName, lastName: lastName, username: username, email: email, password: password});
             
             //If token is recieved in response, user registration was successful
